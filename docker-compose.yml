@@ -6,6 +6,8 @@ services:
       MYSQL_ROOT_PASSWORD: "root"
     image: mysql:5.7
     restart: unless-stopped
+    ports:
+      - "3306:3306"
     volumes:
       - "/data/mysql/db:/var/lib/mysql"
       - "/data/mysql/conf:/etc/mysql/conf.d"
